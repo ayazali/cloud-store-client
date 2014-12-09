@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.shell.samples.hellworld.commands;
-
-import static org.junit.Assert.assertEquals;
+package edu.nu.cs.commands;
 
 import org.junit.Test;
 import org.springframework.shell.Bootstrap;
 import org.springframework.shell.core.CommandResult;
 import org.springframework.shell.core.JLineShellComponent;
 
-public class HelloWorldCommandTests {
+import static org.junit.Assert.assertEquals;
 
-	@Test
-	public void testSimple() {
-		Bootstrap bootstrap = new Bootstrap();
-		
-		JLineShellComponent shell = bootstrap.getJLineShellComponent();
-		
-		CommandResult cr = shell.executeCommand("hw simple --message hello");
-		assertEquals(true, cr.isSuccess());
-		assertEquals("Message = [hello] Location = [null]", cr.getResult());
-	}
+public class CustomCommandTests {
+
+    @Test
+    public void testAuthenicate() {
+        Bootstrap bootstrap = new Bootstrap();
+
+        JLineShellComponent shell = bootstrap.getJLineShellComponent();
+
+        CommandResult cr = shell.executeCommand("authenticate --username {{someuser}} --pass {{somepass}}");
+        assertEquals(true, cr.isSuccess());
+    }
 }

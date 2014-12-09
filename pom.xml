@@ -15,6 +15,7 @@
         <jar.mainclass>org.springframework.shell.Bootstrap</jar.mainclass>
         <log4j.version>1.2.17</log4j.version>
         <junit.version>4.10</junit.version>
+        <spring.version>4.1.2.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -24,6 +25,27 @@
             <artifactId>spring-shell</artifactId>
             <version>${spring.shell.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.4</version>
+        </dependency>
+
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -60,22 +82,39 @@
             <version>1.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.samba.jcifs</groupId>
-            <artifactId>jcifs</artifactId>
-            <version>1.3.3</version>
-        </dependency>
+        <!-- No need now
+<dependency>
+    <groupId>org.samba.jcifs</groupId>
+    <artifactId>jcifs</artifactId>
+    <version>1.3.3</version>
+</dependency>
 
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-vfs2-sandbox</artifactId>
-            <version>2.0</version>
-        </dependency>
-
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-vfs2-sandbox</artifactId>
+    <version>2.0</version>
+</dependency>
+-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.4-beta1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
 

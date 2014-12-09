@@ -25,7 +25,7 @@ public class SFTPHandler {
      */
     public String getFTPURL(String fileName) throws FileSystemException, UnsupportedEncodingException, URISyntaxException {
 
-        String url_s = Constants.SCHEME_SFTP + "://" + Constants.USERINFO_USERNAME + ":" + Constants.USERINFO_PASSWORD + "@" + Constants.REMOTE_HOSTIP + "/" + Constants.REMOTE_BASEPATH + Constants.DESTINATION_DIRECTORY;
+        String url_s = Constants.SCHEME_SFTP + "://" + Constants.USERINFO_USERNAME + ":" + Constants.USERINFO_PASSWORD + "@" + Constants.REMOTE_HOSTIP + "/" + Constants.REMOTE_BASEPATH + Constants.DESTINATION_DIRECTORY + "/" + Constants.LOGIN_USERNAME;
 
         if (fileName != null)
             return url_s + "/" + fileName;

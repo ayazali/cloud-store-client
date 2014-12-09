@@ -1,7 +1,6 @@
 package edu.nu.cs.vfs;
 
 import edu.nu.cs.constants.Constants;
-import org.apache.commons.vfs2.FileObject;
 import org.apache.commons.vfs2.FileSystemException;
 import org.apache.commons.vfs2.FileSystemManager;
 import org.apache.commons.vfs2.impl.SynchronizedFileObject;
@@ -37,7 +36,7 @@ public class GenericDestinationHandler {
             SFTPHandler sftpHandler = new SFTPHandler();
             return fsManager.resolveFile(sftpHandler.getFTPURL(fileName), sftpHandler.getOptions());
         } else {
-            return fsManager.resolveFile(cwd, Constants.DESTINATION_DIRECTORY);
+            return fsManager.resolveFile(cwd, Constants.DESTINATION_DIRECTORY + "/" + Constants.LOGIN_USERNAME);
         }
 
     }

@@ -17,4 +17,8 @@ public class Constants {
 
     public static final String REMOTE_HOSTIP = PropertyUtil.getProperty("remote.hostip");
     public static final String REMOTE_BASEPATH = PropertyUtil.getProperty("remote.basepath");
+
+    public static final String WEB_HOSTIP = PropertyUtil.getProperty("web.hostip");
+
+    public static String LOGIN_USERNAME;
 }
