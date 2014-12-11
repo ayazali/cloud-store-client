@@ -15,6 +15,8 @@ Currently file syncing is built upon two protocols
 - Local File System
 - SFTP
 
+Parent Project available [cloud-store](https://github.com/hasnain110/cloud-store)
+
 Build & Run by simply running
 `mvn clean install`
 
